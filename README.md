@@ -237,7 +237,24 @@ At high PV output, the PV begins causing local voltage rise, so the controller s
 
 ---
 
+## Key Findings
+
+### PV penetration
+Increasing PV at Bus 17 generally improves the feeder's low-voltage condition at the tested operating points. Losses initially decrease, then begin increasing at higher PV penetration.
+
+### PV location
+The same 0.40 MW PV capacity produces different voltage and loss results at different buses, showing that the electrical location of distributed generation matters.
+
+### High PV penetration
+At 1.5 MW at Bus 17, the uncontrolled case reaches a maximum voltage of about 1.0163 p.u. and exhibits reverse active-power flow on part of the feeder.
+
+### Volt-VAR control
+The illustrative controller changes from reactive-power injection at lower PV penetration to reactive-power absorption at higher PV penetration. At 1.5 MW, it reduces the Bus 17 voltage rise while changing the feeder loss level.
+
+---
+
 ## Limitations
+
 - PV output is represented by fixed operating points rather than time-series data
 - the Volt-VAR curve is illustrative
 - the inverter rating is an explicit modelling assumption
@@ -246,20 +263,9 @@ At high PV output, the PV begins causing local voltage rise, so the controller s
 
 ---
 
-## Conclusion
-Increasing PV can improve voltage and reduce losses at lower penetration levels, but these effects change as PV penetration increases. The location of the PV plant also matters because the same capacity can produce different voltage and loss results at different buses.
-
-At high PV penetration, the PV plant can export power upstream and cause local overvoltage. The Volt-VAR controller demonstrated one way an inverter can respond to this voltage rise by adjusting reactive power.
-
-The project therefore focuses on understanding the relationship between PV penetration, PV location, voltage, losses, reverse power flow, and inverter reactive-power control.
-
 ## Tools Used
 
-- Python
-- pandapower
-- pandas
-- NumPy
-- Matplotlib
+Python, Pandapower, Pandas, NumPy, Matplotlib
 
 ---
 
